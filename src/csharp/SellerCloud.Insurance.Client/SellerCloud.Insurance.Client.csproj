@@ -5,6 +5,7 @@
     <Description>SellerCloud Insurance API Client</Description>
     <Copyright>SellerCloud</Copyright>
     <PackageProjectUrl>https://github.com/SellerCloudTeam/insurance-api-samples</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
