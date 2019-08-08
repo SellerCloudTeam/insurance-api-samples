@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>SellerCloud Insurance API Client</Description>
+    <Copyright>SellerCloud</Copyright>
+    <PackageProjectUrl>https://github.com/SellerCloudTeam/insurance-api-samples</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SellerCloud.Net.Http" Version="1.0.0.14" />
+  </ItemGroup>
+
+</Project>
