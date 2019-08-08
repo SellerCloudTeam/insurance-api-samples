@@ -21,13 +21,6 @@ namespace SellerCloud.Insurance.Client.Tasks.Implementations
         {
         }
 
-        public Task<Result<IEnumerable<BlacklistedCustomer>>> GetBlacklistedCustomers(CancellationToken cancellationToken = default(CancellationToken))
-        {
-            return this.HttpGet($"/api/blacklist/customers")
-                       .CancelWith(cancellationToken)
-                       .Result<IEnumerable<BlacklistedCustomer>>();
-        }
-
         public Task<Result<IEnumerable<Country>>> GetBlacklistedCountries(CancellationToken cancellationToken = default(CancellationToken))
         {
             return this.HttpGet($"/api/blacklist/countries")

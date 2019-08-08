@@ -6,8 +6,6 @@ namespace SellerCloud.Insurance.Client.Sync.Contracts
 {
     public interface IBlacklistClient
     {
-        Result<IEnumerable<BlacklistedCustomer>> GetBlacklistedCustomers();
-
         Result<IEnumerable<Country>> GetBlacklistedCountries();
 
         Result<IEnumerable<Product>> GetBlacklistedProducts();

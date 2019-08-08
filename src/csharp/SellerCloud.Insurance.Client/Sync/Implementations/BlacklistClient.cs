@@ -18,12 +18,6 @@ namespace SellerCloud.Insurance.Client.Sync.Implementations
         {
         }
 
-        public Result<IEnumerable<BlacklistedCustomer>> GetBlacklistedCustomers()
-        {
-            return this.HttpGet($"/api/blacklist/customers")
-                       .Result<IEnumerable<BlacklistedCustomer>>();
-        }
-
         public Result<IEnumerable<Country>> GetBlacklistedCountries()
         {
             return this.HttpGet($"/api/blacklist/countries")
