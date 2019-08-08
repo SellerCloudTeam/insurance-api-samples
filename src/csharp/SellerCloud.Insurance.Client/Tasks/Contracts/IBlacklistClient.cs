@@ -8,8 +8,6 @@ namespace SellerCloud.Insurance.Client.Tasks.Contracts
 {
     public interface IBlacklistClient
     {
-        Task<Result<IEnumerable<BlacklistedCustomer>>> GetBlacklistedCustomers(CancellationToken cancellationToken = default(CancellationToken));
-
         Task<Result<IEnumerable<Country>>> GetBlacklistedCountries(CancellationToken cancellationToken = default(CancellationToken));
 
         Task<Result<IEnumerable<Product>>> GetBlacklistedProducts(CancellationToken cancellationToken = default(CancellationToken));
