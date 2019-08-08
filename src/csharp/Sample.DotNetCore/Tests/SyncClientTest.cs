@@ -109,6 +109,7 @@ namespace Sample.DotNetCore.Tests
             var insurePackageRequest6 = ConstructSampleInsurePackageRequest("FedEx Express Worldwide", insuredAmount: 25, blacklistedCountry: true);
             var insurePackageRequest7 = ConstructSampleInsurePackageRequest("FedEx Ground", insuredAmount: 25, description: "New iPad 3G");
             var insurePackageRequest8 = ConstructSampleInsurePackageRequest("FedEx Ground", insuredAmount: 1500, description: "New iPad 3G");
+            var insurePackageRequest9 = ConstructSampleInsurePackageRequest("FedEx Freight", insuredAmount: 250);
 
             var packageException3 = MustThrow(() => InsurePackage(insuredPackageClient, token, insurePackageRequest3));
             var packageException4 = MustThrow(() => InsurePackage(insuredPackageClient, token, insurePackageRequest4));
@@ -116,6 +117,7 @@ namespace Sample.DotNetCore.Tests
             var packageException6 = MustThrow(() => InsurePackage(insuredPackageClient, token, insurePackageRequest6));
             var packageException7 = MustThrow(() => InsurePackage(insuredPackageClient, token, insurePackageRequest7));
             var packageException8 = MustThrow(() => InsurePackage(insuredPackageClient, token, insurePackageRequest8));
+            var packageException9 = MustThrow(() => InsurePackage(insuredPackageClient, token, insurePackageRequest9));
 
             Log.Line(packageException3.Message);
             Log.Line(packageException4.Message);
@@ -123,6 +125,7 @@ namespace Sample.DotNetCore.Tests
             Log.Line(packageException6.Message);
             Log.Line(packageException7.Message);
             Log.Line(packageException8.Message);
+            Log.Line(packageException9.Message);
 
             // Can insure package?
             var canInsurePackage1 = CanInsurePackage(insuredPackageClient, token, insurePackageRequest1);
@@ -133,6 +136,7 @@ namespace Sample.DotNetCore.Tests
             var canInsurePackage6 = CanInsurePackage(insuredPackageClient, token, insurePackageRequest6);
             var canInsurePackage7 = CanInsurePackage(insuredPackageClient, token, insurePackageRequest7);
             var canInsurePackage8 = CanInsurePackage(insuredPackageClient, token, insurePackageRequest8);
+            var canInsurePackage9 = CanInsurePackage(insuredPackageClient, token, insurePackageRequest9);
 
             Log.Line(canInsurePackage1.IsSuccessful ? "Can insure package 1" : canInsurePackage1.Message);
             Log.Line(canInsurePackage2.IsSuccessful ? "Can insure package 2" : canInsurePackage2.Message);
@@ -142,6 +146,7 @@ namespace Sample.DotNetCore.Tests
             Log.Line(canInsurePackage6.IsSuccessful ? "Can insure package 6" : canInsurePackage6.Message);
             Log.Line(canInsurePackage7.IsSuccessful ? "Can insure package 7" : canInsurePackage7.Message);
             Log.Line(canInsurePackage8.IsSuccessful ? "Can insure package 8" : canInsurePackage8.Message);
+            Log.Line(canInsurePackage9.IsSuccessful ? "Can insure package 9" : canInsurePackage9.Message);
 
             // Get
             var freshInsuredPackage1 = GetInsuredPackage(insuredPackageClient, token, insuredPackage1.PackageId);
